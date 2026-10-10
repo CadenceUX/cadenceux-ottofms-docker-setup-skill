@@ -1,0 +1,29 @@
+{
+  "cases": [
+    {
+      "prompt": "FileMaker Server is running in my Docker container now, can we install OttoFMS on it?",
+      "expected": "Triggers the skill; assumes cadenceux-fms-docker-setup's base install is done, installs sudo first, runs the OttoFMS install script, starts the systemd service, verifies via /otto/."
+    },
+    {
+      "prompt": "OttoFMS wants a license key and I don't have one.",
+      "expected": "Triggers the skill; directs to console.ottomatic.cloud/auth/signup for a free key, notes the possible credit-card requirement is the developer's own step, then the two-field Activate flow."
+    },
+    {
+      "prompt": "This server isn't reachable from the internet — will OttoFMS activation even work, and what's this 'Add Server' URL field asking for?",
+      "expected": "Triggers the skill; explains activation is outbound-only (works fine without inbound access) and clarifies Add Server is a separate, optional, inbound-requiring Cloud Console feature not needed for licensing."
+    }
+  ],
+  "near_misses": [
+    {
+      "prompt": "How do I install FileMaker Server on Docker in the first place?",
+      "expected_to_trigger": false,
+      "why": "That's the base install — should trigger cadenceux-fms-docker-setup instead, not this skill, which assumes FMS is already running."
+    },
+    {
+      "prompt": "Can you help me write an OttoDeploy migration script step by step for a 12-file solution?",
+      "expected_to_trigger": "partial",
+      "why": "This skill only briefly pointers to OttoDeploy/DMT patterns, doesn't cover deep multi-file deployment configuration — should say so rather than improvising beyond its tested scope."
+    }
+  ],
+  "version": "1.1.0"
+}
