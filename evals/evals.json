@@ -11,6 +11,19 @@
     {
       "prompt": "This server isn't reachable from the internet — will OttoFMS activation even work, and what's this 'Add Server' URL field asking for?",
       "expected": "Triggers the skill; explains activation is outbound-only (works fine without inbound access) and clarifies Add Server is a separate, optional, inbound-requiring Cloud Console feature not needed for licensing."
+    },
+    {
+      "id": "skill-update-check",
+      "mode": "any",
+      "prompt": "(First request this session; the repo's VERSION file says a newer release exists.) Use cadenceux-ottofms-docker-setup for my next task.",
+      "must": [
+        "fetches the repo VERSION once and starts the answer with the skill-update notice",
+        "skips the check when fmp-dev-orchestrator is installed"
+      ],
+      "must_not": [
+        "repeats the notice later in the session",
+        "blocks the task if the fetch fails"
+      ]
     }
   ],
   "near_misses": [
@@ -25,5 +38,5 @@
       "why": "This skill only briefly pointers to OttoDeploy/DMT patterns, doesn't cover deep multi-file deployment configuration — should say so rather than improvising beyond its tested scope."
     }
   ],
-  "version": "1.1.0"
+  "version": "1.1.1"
 }

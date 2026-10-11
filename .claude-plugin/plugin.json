@@ -1,7 +1,7 @@
 {
   "name": "cadenceux-ottofms-docker-setup",
   "displayName": "OttoFMS on Docker",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Installs and activates OttoFMS on a Docker-hosted FileMaker Server: install, service start, Nginx /otto/ access, container commit and licence activation.",
   "author": {
     "name": "Darrin Southern",

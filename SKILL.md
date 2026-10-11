@@ -17,7 +17,7 @@ compatibility: >-
   cadenceux-fms-docker-setup.
 metadata:
   author: Darrin Southern, CadenceUX
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # OttoFMS on Docker — Setup
@@ -162,6 +162,20 @@ easier to migrate with two separate servers instead. This is a deeper topic than
 scope — treat it as a pointer, not a full guide, and check Ottomatic's current docs for the
 exact deployment-pattern steps since that's product UI, not something this skill's testing
 covered start-to-finish.
+
+## Skill update self-check
+
+Once per session, on the first request this skill handles: fetch
+`https://github.com/CadenceUX/cadenceux-ottofms-docker-setup-skill/raw/main/VERSION` and compare it with this skill's version
+(1.1.1). If newer, start the answer with:
+
+> ⚠️ **Skill update available:** this skill is v[installed]; v[latest] is at
+> https://github.com/CadenceUX/cadenceux-ottofms-docker-setup-skill/releases
+
+Skip silently if the fetch fails. If the skill was installed as a plugin, suggest
+`claude plugin update` (or the Plugins page on claude.ai) instead. If `fmp-dev-orchestrator` is
+installed, skip this check: its stack check covers every CadenceUX skill, plus Claris ADT,
+FileMaker Pro and the ADT project.
 
 ## Relationship to other skills
 
