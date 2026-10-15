@@ -35,10 +35,16 @@ claude plugin install cadenceux-ottofms-docker-setup@cadenceux
 **claude.ai and Cowork:** Customize → Plugins → Add marketplace from GitHub →
 `CadenceUX/cadenceux-skills`, then install **cadenceux-ottofms-docker-setup**.
 
-**Claude desktop app (macOS):** download `cadenceux-ottofms-docker-setup-v1.1.0.skill` from the
-[latest release](https://github.com/CadenceUX/cadenceux-ottofms-docker-setup-skill/releases) and double-click it.
+**Claude desktop app (macOS):** download [`cadenceux-ottofms-docker-setup.skill`](https://github.com/CadenceUX/cadenceux-ottofms-docker-setup-skill/releases/latest/download/cadenceux-ottofms-docker-setup.skill) and
+double-click it.
 
-**Claude.ai in a browser, as a single skill:** Customize → Skills → upload the release `.zip`.
+**Claude.ai in a browser, as a single skill:** Customize → Skills → upload
+[`cadenceux-ottofms-docker-setup.zip`](https://github.com/CadenceUX/cadenceux-ottofms-docker-setup-skill/releases/latest/download/cadenceux-ottofms-docker-setup.zip).
+
+> Both files are attached to the latest [release](https://github.com/CadenceUX/cadenceux-ottofms-docker-setup-skill/releases).
+> Don't use GitHub's green **Code → Download ZIP** button or a release's **Source code (zip)**:
+> those are snapshots of the repository, not a packaged skill, and Claude won't install them
+> as one.
 
 ## Files
 

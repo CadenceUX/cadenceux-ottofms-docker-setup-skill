@@ -17,7 +17,7 @@ compatibility: >-
   cadenceux-fms-docker-setup.
 metadata:
   author: Darrin Southern, CadenceUX
-  version: "1.1.1"
+  version: "1.1.2"
 ---
 
 # OttoFMS on Docker — Setup
@@ -167,7 +167,7 @@ covered start-to-finish.
 
 Once per session, on the first request this skill handles: fetch
 `https://github.com/CadenceUX/cadenceux-ottofms-docker-setup-skill/raw/main/VERSION` and compare it with this skill's version
-(1.1.1). If newer, start the answer with:
+(1.1.2). If newer, start the answer with:
 
 > ⚠️ **Skill update available:** this skill is v[installed]; v[latest] is at
 > https://github.com/CadenceUX/cadenceux-ottofms-docker-setup-skill/releases
